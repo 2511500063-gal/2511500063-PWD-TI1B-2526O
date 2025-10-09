@@ -1,5 +1,9 @@
 ﻿# pertemuan-03
 
-Ini adalah folder untuk pertemuan ke-3.
+NIM : 2511500063<br>
+Nama : GALANG NURHAFIZD<br>
 
-Tulis deskripsi atau catatan pertemuan di sini.
+Hari ini, Kamis 09 Oktober 2025, saya belajar:
+ <ol>
+    <li>copy isi file emmet.html (pertemuan-02) ke index.html (pertemuan-03)</li>
+ </ol>
