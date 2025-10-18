@@ -23,4 +23,5 @@ Hari ini, Kamis 09 Oktober 2025, saya belajar:
    <li>membuat styling id section#contact input dan textarea</li>
    <li>membuat styling id sectionn#contact warna tombol </li>
    <li>membuat styling id section#contact hover tombol </li>
+   <li>membuat styling id section#contact styling label dan label>span</li>
  </ol>
