@@ -18,6 +18,7 @@ Hari ini, Kamis 09 Oktober 2025, saya belajar:
    <li>membuat styling id section#contact groups selector</li>
    <li>membuat styling id section#contact upgrade struktur form</li>
    <li>membuat styling id section#contact styling label</li>
-   <li>membuat styling id section#contact styling label span</li>
-   <li>membuat styling id section#contact styling button</li>
+   <li>membuat styling id section#contact styling label>span</li>
+   <li>membuat styling id section#contact styling tombol</li>
+   <li>membuat styling id section#contact input dan textarea</li>
  </ol>
