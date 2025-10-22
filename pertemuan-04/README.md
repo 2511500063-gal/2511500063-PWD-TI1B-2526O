@@ -9,4 +9,5 @@ Hari ini, Rabu 22 Oktober, saya mempelajari:
   <li>ganti internal css ke eksternal css</li>
   <li>aturan css untuk body dan global reset</li>
   <li>styling header</li>
+  <li>styling section#home</li>
 <ol>
