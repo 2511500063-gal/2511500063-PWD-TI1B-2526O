@@ -12,4 +12,5 @@ Hari ini, Rabu 22 Oktober, saya mempelajari:
   <li>styling section#home</li>
   <li>styling footer</li>
   <li>styling navigasi</li>
+  <li>styling header mode mobile</li>
 <ol>
