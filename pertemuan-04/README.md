@@ -1,5 +1,9 @@
 ﻿# pertemuan-04
 
-Ini adalah folder untuk pertemuan ke-4.
+NIM : 2511500063<br>
+NAMA : GALANG NURHAFIZD<br>
 
-Tulis deskripsi atau catatan pertemuan di sini.
+Hari ini, Rabu 22 Oktober, saya mempelajari:
+<ol>
+  <li>copy-paste isi index.html (pertemuan-03) ke index.html (pertemuan-04)</li>
+<ol>
