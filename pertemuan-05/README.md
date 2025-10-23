@@ -8,4 +8,5 @@ Tulis deskripsi atau catatan pertemuan di sini.
     <li>copy paste index.html dan style.css dari pertemuan-04</li>
     <li>menambah tombol hamburger</li>
     <li>styling class menu toggle</li>
+    <li>styling class menu toggle untuk mobile</li>
 <ol>
