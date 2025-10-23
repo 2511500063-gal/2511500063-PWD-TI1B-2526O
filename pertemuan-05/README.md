@@ -9,4 +9,5 @@ Tulis deskripsi atau catatan pertemuan di sini.
     <li>menambah tombol hamburger</li>
     <li>styling class menu toggle</li>
     <li>styling class menu toggle untuk mobile</li>
+    <li>styling nav mobile</li>
 <ol>
