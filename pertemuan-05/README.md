@@ -11,4 +11,6 @@ Tulis deskripsi atau catatan pertemuan di sini.
     <li>styling class menu toggle untuk mobile</li>
     <li>styling nav mobile</li>
     <li>styling elemen nav mobile class active</li>
+    <li>menambah file script.js</li>
+    <li>membuat menu toggle klik</li>
 <ol>
