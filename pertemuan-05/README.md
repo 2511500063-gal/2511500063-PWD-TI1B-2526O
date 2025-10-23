@@ -3,3 +3,7 @@
 Ini adalah folder untuk pertemuan ke-5.
 
 Tulis deskripsi atau catatan pertemuan di sini.
+
+<ol>
+    <li>copy paste index.html dan style.css dari pertemuan-04</li>
+<ol>
