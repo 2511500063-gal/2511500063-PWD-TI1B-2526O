@@ -6,4 +6,5 @@ Tulis deskripsi atau catatan pertemuan di sini.
 
 <ol>
     <li>copy paste index.html dan style.css dari pertemuan-04</li>
+    <li>menambah tombol hamburger</li>
 <ol>
