@@ -12,5 +12,6 @@ Tulis deskripsi atau catatan pertemuan di sini.
     <li>styling nav mobile</li>
     <li>styling elemen nav mobile class active</li>
     <li>menambah file script.js</li>
-    <li>membuat menu toggle klik</li>
+    <li>membuat script menu toggle klik</li>
+    <li>perbaiki sintaks dan tambahkan validasi nomor telepon"</li>
 <ol>
