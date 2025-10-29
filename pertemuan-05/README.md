@@ -14,4 +14,9 @@ Tulis deskripsi atau catatan pertemuan di sini.
     <li>menambah file script.js</li>
     <li>membuat script menu toggle klik</li>
     <li>perbaiki sintaks dan tambahkan validasi nomor telepon"</li>
+    <li>menambahkan inline script</li>
+    <li>menambahkan internal script</li>
+    <li>menambahkan eksternal script</li>
+    <li>menambahkan fungsi validasi form input nama dan email</li>
+    <li></li>
 <ol>

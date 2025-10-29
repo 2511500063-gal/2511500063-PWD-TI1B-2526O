@@ -1,11 +1,11 @@
-# pertemuan-04
+# pertemuan-05
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Judul Halaman</title>
+  <title>Galang Nurhafizd</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -19,6 +19,19 @@
       padding: 20px;
       color: #fff;
       text-align: center;
+      position: relative;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: none;
+      color: #fff;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+      display: none;
     }
 
     nav ul {
@@ -137,7 +150,27 @@
       margin-top: 40px;
     }
 
+    #output {
+      text-align: center;
+      color: yellow;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
     @media (max-width:600px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+      }
+
+      nav.active ul {
+        display: flex;
+      }
+
       #about p,
       #contact label {
         flex-direction: column;
@@ -161,10 +194,8 @@
 
 <body>
   <header>
-    <h1>Ini Header</h1>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-      &#9776;
-    </button>
+    <h1>GALANG NURHAFIZD</h1>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
@@ -177,7 +208,16 @@
   <main>
     <section id="home">
       <h2>Selamat Datang</h2>
-      <p>Ini contoh paragraf HTML.</p>
+      <p>Ini contoh halaman dengan JavaScript eksternal.</p>
+
+      <div id="output"></div>
+
+      <button id="tanyaBtn">Tanya Nama</button>
+      <button id="ubahTeksBtn">Ubah Teks</button>
+      <p id="pesan">Teks awal</p>
+
+      <input type="text" id="namaLatihan" placeholder="Masukkan nama">
+      <button id="cekBtn">Cek Nama</button>
     </section>
 
     <section id="about">
@@ -215,6 +255,8 @@
   <footer>
     <p>&copy; 2025 GALANG NURHAFIZD {2511500063}</p>
   </footer>
-  <script src="script.js"></script>
+
+  <!-- JavaScript eksternal -->
+  <script src="script.js" defer></script>
 </body>
 </html>

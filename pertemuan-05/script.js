@@ -1,6 +1,45 @@
 document.getElementById("menuToggle").addEventListener("click", function () {
   document.querySelector("nav").classList.toggle("active");
-  
+
+alert("Halo, Selamat Datang!");
+
+document.getElementById("output").innerHTML = "<h2>Halo Dunia!</h2>";
+
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.querySelector('nav');
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+
+function tanyaNama() {
+  let nama = prompt("Siapa nama kamu?");
+  if (nama) {
+    alert("Halo, " + nama + "!");
+  } else {
+    alert("Nama tidak diisi.");
+  }
+}
+
+function ubahTeks() {
+  document.getElementById("pesan").innerText = "Teks berhasil diubah!";
+}
+
+function cekNama() {
+  let nama = document.getElementById("namaLatihan").value;
+  if (nama === "") {
+    alert("Nama tidak boleh kosong!");
+  } else {
+    alert("Halo, " + nama + "!");
+  }
+}
+
+document.getElementById("tanyaBtn").addEventListener("click", tanyaNama);
+document.getElementById("ubahTeksBtn").addEventListener("click", ubahTeks);
+document.getElementById("cekBtn").addEventListener("click", cekNama);
+
+console.log("Script berjalan dengan baik!");
+
 });
 
 document.querySelector("form").addEventListener("submit",function (e) {
