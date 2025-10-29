@@ -18,5 +18,5 @@ Tulis deskripsi atau catatan pertemuan di sini.
     <li>menambahkan internal script</li>
     <li>menambahkan eksternal script</li>
     <li>menambahkan fungsi validasi form input nama dan email</li>
-    <li></li>
+    <li>memanbahkan perbaiki css</li>
 <ol>
