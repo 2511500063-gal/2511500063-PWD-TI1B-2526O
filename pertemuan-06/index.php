@@ -230,7 +230,7 @@
         ?>
 
       <h2>About GALANG NURHAFIZD</h2>
-      <p><strong>NIM:</strong> <?php echo $nim ?></p>
+      <p><strong>NIM:</strong> <?php echo $NIM ?></p>
       <p><strong>Nama Lengkap:</strong> GALANG NURHAFIZD &#9787;</p>
       <p><strong>Tempat Lahir:</strong> PANGKALPINANG</p>
       <p><strong>Tanggal Lahir:</strong> 6 Mei 2007</p>
