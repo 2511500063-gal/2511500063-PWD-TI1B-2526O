@@ -209,6 +209,10 @@
     <section id="home">
       <h2>Selamat Datang</h2>
       <p>Ini contoh halaman dengan JavaScript eksternal.</p>
+      <?php
+        echo "Halo Dunia!<br>"
+        echo "Nama Saya GALANG NURHAFIZD"
+      ?>
 
       <div id="output"></div>
 
@@ -220,8 +224,13 @@
     </section>
 
     <section id="about">
+      <?php
+        $NIM = "2511500063";
+        $nim = "2511500063";
+        ?>
+
       <h2>About GALANG NURHAFIZD</h2>
-      <p><strong>NIM:</strong> 2511500063</p>
+      <p><strong>NIM:</strong> <?php echo $nim ?></p>
       <p><strong>Nama Lengkap:</strong> GALANG NURHAFIZD &#9787;</p>
       <p><strong>Tempat Lahir:</strong> PANGKALPINANG</p>
       <p><strong>Tanggal Lahir:</strong> 6 Mei 2007</p>
