@@ -208,7 +208,7 @@
   <main>
     <section id="home">
       <h2>Selamat Datang</h2>
-      <p>Ini contoh halaman dengan JavaScript eksternal.</p>
+      
       <?php
         echo "Halo Dunia!<br>"
       ?>
