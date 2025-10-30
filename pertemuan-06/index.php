@@ -227,12 +227,13 @@
         $NIM = "2511500063";
         $nim = "2511500063";
         $nama = "GALANG NURHAFIZD";
+        $tempat = "PANGKALPINANG"
         ?>
 
       <h2>About GALANG NURHAFIZD</h2>
       <p><strong>NIM:</strong><?php echo $NIM ?></p>
       <p><strong>Nama Lengkap:</strong><?php echo $nama ?> &#9787;</p>
-      <p><strong>Tempat Lahir:</strong> PANGKALPINANG</p>
+      <p><strong>Tempat Lahir:</strong><?php echo $tempat ?></p>
       <p><strong>Tanggal Lahir:</strong> 6 Mei 2007</p>
       <p><strong>Hobi:</strong> Tidur, Main Musik, Seni &#9787;</p>
       <p><strong>Pasangan:</strong> Belum Ada &#128546;</p>
