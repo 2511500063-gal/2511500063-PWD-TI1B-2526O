@@ -229,6 +229,12 @@
         $nama = "GALANG NURHAFIZD";
         $tempat = "PANGKALPINANG";
         $tanggal = "6 Mei 2007";
+        $Hobi = "Tidur, Musik, Seni";
+        $Pasangan = "Belum Ada";
+        $Pekerjaan = "Kuliah di ISB ATMA LUHUR";
+        $Namaorangtua = "Bapak Chandra dan Ibu Norma";
+        $Namakakak = "GALANG NURHAFIZD";
+        $Namaadik = "Galang dan Nadila";
         ?>
 
       <h2>About GALANG NURHAFIZD</h2>
@@ -236,12 +242,12 @@
       <p><strong>Nama Lengkap:</strong><?php echo $nama ?> &#9787;</p>
       <p><strong>Tempat Lahir:</strong><?php echo $tempat ?></p>
       <p><strong>Tanggal Lahir:</strong><?php echo $tanggal ?></p>
-      <p><strong>Hobi:</strong> Tidur, Main Musik, Seni &#9787;</p>
-      <p><strong>Pasangan:</strong> Belum Ada &#128546;</p>
-      <p><strong>Pekerjaan:</strong> Kuliah di ISB ATMA LUHUR</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Chandra dan Ibu Norma</p>
-      <p><strong>Nama Kakak:</strong> GALANG NURHAFIZD</p>
-      <p><strong>Nama Adik:</strong> Galang dan Nadila</p>
+      <p><strong>Hobi:</strong><?php echo $Hobi ?> &#9787;</p>
+      <p><strong>Pasangan:</strong><?php echo $Pasangan ?> &#128546;</p>
+      <p><strong>Pekerjaan:</strong><?php echo $Pekerjaan ?></p>
+      <p><strong>Nama Orang Tua:</strong><?php echo $Namaorangtua ?></p>
+      <p><strong>Nama Kakak:</strong><?php echo $Namakakak ?></p>
+      <p><strong>Nama Adik:</strong><?php echo $Namaadik ?></p>
     </section>
 
     <section id="contact">
