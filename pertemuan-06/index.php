@@ -211,7 +211,6 @@
       <p>Ini contoh halaman dengan JavaScript eksternal.</p>
       <?php
         echo "Halo Dunia!<br>"
-        echo "Nama Saya GALANG NURHAFIZD"
       ?>
 
       <div id="output"></div>
