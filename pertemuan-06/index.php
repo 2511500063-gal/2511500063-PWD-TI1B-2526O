@@ -22,9 +22,9 @@
       position: relative;
     }
 
-    .menuToggle {
+    .menu-toggle {
       position: absolute;
-      left: 20px;
+      right: 20px;
       top: 20px;
       background: none;
       color: #fff;
