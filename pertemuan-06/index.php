@@ -200,6 +200,7 @@
       <ul>
         <li><a href="#home">Beranda</a></li>
         <li><a href="#about">Tentang</a></li>
+        <li><a href="#ipk">Nilai Saya</a></li>
         <li><a href="#contact">Kontak</a></li>
       </ul>
     </nav>
@@ -248,6 +249,99 @@
       <p><strong>Nama Orang Tua:</strong><?php echo $Namaorangtua ?></p>
       <p><strong>Nama Kakak:</strong><?php echo $Namakakak ?></p>
       <p><strong>Nama Adik:</strong><?php echo $Namaadik ?></p>
+    </section>
+
+    <section id="ipk">
+      <h2>Nilai Saya</h2>
+      <?php
+      $namaMatkul1 = "Algoritma dan Struktur Data";
+      $namaMatkul2 = "Agama";
+      $namaMatkul3 = "Konsep Basis Data";
+      $namaMatkul4 = "Kalkulus";
+      $namaMatkul5 = "Pemrograman Web Dasar";
+
+      $sksMatkul1 = 4;
+      $sksMatkul2 = 2;
+      $sksMatkul3 = 4;
+      $sksMatkul4 = 3;
+      $sksMatkul5 = 3;
+
+      $nilaiHadir1 = 90; $nilaiTugas1 = 60; $nilaiUTS1 = 80; $nilaiUAS1 = 70;
+      $nilaiHadir2 = 70; $nilaiTugas2 = 50; $nilaiUTS2 = 60; $nilaiUAS2 = 80;
+      $nilaiHadir3 = 80; $nilaiTugas3 = 70; $nilaiUTS3 = 85; $nilaiUAS3 = 90;
+      $nilaiHadir4 = 85; $nilaiTugas4 = 75; $nilaiUTS4 = 70; $nilaiUAS4 = 80;
+      $nilaiHadir5 = 69; $nilaiTugas5 = 80; $nilaiUTS5 = 90; $nilaiUAS5 = 100;
+
+      function hitungNilaiAkhir($hadir, $tugas, $uts, $uas) {
+        return (0.1 * $hadir) + (0.2 * $tugas) + (0.3 * $uts) + (0.4 * $uas);
+      }
+
+      function tentukanGrade($nilaiAkhir, $nilaiHadir) {
+        if ($nilaiHadir < 70) return 'E';
+        if ($nilaiAkhir >= 85) return 'A';
+        elseif ($nilaiAkhir >= 80) return 'A-';
+        elseif ($nilaiAkhir >= 75) return 'B+';
+        elseif ($nilaiAkhir >= 70) return 'B';
+        elseif ($nilaiAkhir >= 65) return 'B-';
+        elseif ($nilaiAkhir >= 60) return 'C+';
+        elseif ($nilaiAkhir >= 55) return 'C';
+        elseif ($nilaiAkhir >= 50) return 'C-';
+        elseif ($nilaiAkhir >= 45) return 'D';
+        else return 'E';
+      }
+
+      function nilaiMutu($grade) {
+        switch ($grade) {
+          case 'A': return 4.00;
+          case 'A-': return 3.75;
+          case 'B+': return 3.50;
+          case 'B': return 3.00;
+          case 'B-': return 2.70;
+          case 'C+': return 2.50;
+          case 'C': return 2.25;
+          case 'C-': return 2.00;
+          case 'D': return 1.00;
+          default: return 0.00
+        }
+      }
+
+      function statusKelulusan($grade) {
+        return in_array($grade, ['A','A-','B+','B','B-','C+','C','C-']) ? 'Lulus' : 'Gagal';
+      }
+
+      for ($i = 1; $i <= 5; $i++) {
+        ${"nilaiAkhir$i"} = round(hitungNilaiAkhir(${"nilaiHadir$i"}, ${"nilaiTugas$i"}, ${"nilaiUTS$i"}, ${"nilaiUAS$i"}));
+        ${"grade$i"} = tentukanGrade(${"nilaiAkhir$i"}, ${"nilaiHadir$i"});
+        ${"mutu$i"} = nilaiMutu(${"grade$i"});
+        ${"bobot$i"} = ${"mutu$i"} * ${"sksMatkul$i"};
+        ${"status$i"} = statusKelulusan(${"grade$i"});
+      }
+
+      $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul3 + $sksMatkul4 + $sksMatkul5;
+      $totalBobot = $bobot1 + $bobot2 + $bobot3 + $bobot4 +$bobot5;
+      $IPK = $totalBobot / $totalSKS;
+
+      ?>
+
+      <?php for ($i = 1; $i <= 5; $i++) { ?>
+      <p><strong>Nama Matakuliah ke-<?= $i ?> :</strong> <?= ${"namaMatkul$i"} ?></p>
+      <p><strong>SKS :</strong> <?= ${"sksMatkul$i"} ?></p>
+      <p><strong>Kehadiran :</strong> <?= ${"nilaiHadir$i"} ?></p>
+      <p><strong>Tugas :</strong> <?= ${"nilaiTugas$i"} ?></p>
+      <p><strong>UTS :</strong> <?= ${"nilaiUTS$i"} ?></p>
+      <p><strong>UAS :</strong> <?= ${"nilaiUAS$i"} ?></p>
+      <p><strong>Nilai Akhir :</strong> <?= ${"nilaiAkhir$i"} ?></p>
+      <p><strong>Grade :</strong> <?= ${"grade$i"} ?></p>
+      <p><strong>Angka Mutu :</strong> <?= number_format(${"mutu$i"}, 2) ?></p>
+      <p><strong>Bobot :</strong> <?= number_format(${"bobot$i"}, 2) ?></p>
+      <p><strong>Status :</strong> <?= ${"status$i"} ?></p>
+      <hr style="border:1px solid #ccc; margin:10px 0;">
+    <?php } ?> 
+
+    <p><strong>Total Bobot :</strong> <?= number_format($totalBobot, 2) ?></p>
+    <p><strong>Total SKS :</strong> <?= $totalSKS ?></p>
+    <p><strong>IPK :</strong> <?= number_format($IPK, 2) ?></p>
+
     </section>
 
     <section id="contact">
