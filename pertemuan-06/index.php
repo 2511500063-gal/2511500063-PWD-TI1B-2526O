@@ -67,7 +67,6 @@
       max-width: 700px;
       margin: 20px auto;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: left;
     }
 
     #about h2,
@@ -77,7 +76,6 @@
       padding-bottom: 6px;
       margin-top: 0;
       margin-bottom: 16px;
-      text-align: right;
     }
 
     #about p,
