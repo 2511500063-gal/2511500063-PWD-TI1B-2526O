@@ -59,7 +59,8 @@
     }
 
     #about,
-    #contact {
+    #contact,
+    #ipk {
       background-color: #fff;
       border-radius: 10px;
       padding: 20px;
@@ -69,7 +70,8 @@
     }
 
     #about h2,
-    #contact h2 {
+    #contact h2,
+    #ipk h2 {
       border-bottom: 2px solid #e6e6e6;
       padding-bottom: 6px;
       margin-top: 0;
