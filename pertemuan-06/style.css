@@ -91,7 +91,7 @@
  }
 
  @media (max-width: 600px) {
-   .menu-toggle {
+   .menuToggle {
      position: absolute;
      left: 20px;
      top: 20px;
