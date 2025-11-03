@@ -24,7 +24,7 @@
 
     .menu-toggle {
       position: absolute;
-      right: 20px;
+      left: 20px;
       top: 20px;
       background: none;
       color: #fff;
