@@ -301,7 +301,7 @@
           case 'C': return 2.25;
           case 'C-': return 2.00;
           case 'D': return 1.00;
-          default: return 0.00
+          default: return 0.00;
         }
       }
 
