@@ -49,8 +49,8 @@
  #about,
  #contact,
  #ipk {
-   background-color: #003366;
-   color: #e6e6e6;
+   background-color: #fff;
+   color: #003366;
    border-radius: 10px;
    padding: 20px;
    max-width: 700px;
@@ -62,8 +62,8 @@
  #about h2,
  #contact h2,
  #ipk h2 {
-   color: #ffffff;
-   border-bottom: 2px solid #003366;
+   color: #003366;
+   border-bottom: 2px solid #fff;
    padding-bottom: 6px;
    margin-top: 0;
    margin-bottom: 16px;
