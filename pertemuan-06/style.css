@@ -47,7 +47,8 @@
 
  #home,
  #about,
- #contact {
+ #contact,
+ #ipk {
    background-color: #003366;
    color: #e6e6e6;
    border-radius: 10px;
@@ -59,7 +60,8 @@
 
  #home h2,
  #about h2,
- #contact h2 {
+ #contact h2,
+ #ipk h2 {
    color: #ffffff;
    border-bottom: 2px solid #003366;
    padding-bottom: 6px;
