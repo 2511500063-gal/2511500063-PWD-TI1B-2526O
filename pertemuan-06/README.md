@@ -1,5 +1,10 @@
 ﻿# pertemuan-06
 
-Ini adalah folder untuk pertemuan ke-6.
+Hari ini, Kamis 30 Oktober 2025,
+Saya belajar variabel PHP <br>
 
-Tulis deskripsi atau catatan pertemuan di sini.
+<ol>
+<li>variabel php</li>
+<li>tambahkan section#ipk sama seperti section#About dan tampilkan perhitungan nilai dinamis</li>
+<li>menambahkan section#ipk pada group selector section#about dan section#contact</li>
+</ol>
