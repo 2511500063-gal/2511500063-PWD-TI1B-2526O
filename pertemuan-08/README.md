@@ -15,4 +15,6 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>menambahkan styling section#Data di stye.css lagi</li>
   <li>menambahkan session dan exit di proses.php</li>
   <li>menambahkan if endif di index.php</li>
+  <li>menambahkan section#about lagi di index.php</li>
+  <li>menambahkan isset di proses.php</li>
 </ol>
