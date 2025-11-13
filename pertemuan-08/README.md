@@ -9,5 +9,5 @@ Kelompok: TI1B<br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>Menambahkan section#data baru di index.php</li>
-  <li></li>
+  <li>menambahkan form dan input di section#data</li>
 </ol>
