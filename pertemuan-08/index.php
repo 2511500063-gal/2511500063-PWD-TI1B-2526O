@@ -29,7 +29,7 @@ $sesadik = $_SESSION["adik"] ?? "";
 
 <body>
   <header>
-    <h1>Data Mahasiswa ISB Atma Luhur</h1>
+    <h1>Ini Header</h1>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
       &#9776;
     </button>
@@ -47,7 +47,7 @@ $sesadik = $_SESSION["adik"] ?? "";
     
     <section id="home">
       <h2>Selamat Datang</h2>
-      <p>Halo dunia! Ini adalah contoh halaman PHP untuk mengelola data mahasiswa.</p>
+      <p>Halo dunia! Ini adalah contoh halaman Form handling dengan PHP.</p>
     </section>
 
     
