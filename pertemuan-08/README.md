@@ -10,4 +10,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>Menambahkan section#data baru di index.php</li>
   <li>menambahkan form dan input di section#data</li>
+  <li>menambahkan style section#Data dengan group selector di style.css</li>
 </ol>
