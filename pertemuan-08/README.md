@@ -14,4 +14,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>memperbaiki style.css karena ada yang salah</li>
   <li>menambahkan styling section#Data di stye.css lagi</li>
   <li>menambahkan session dan exit di proses.php</li>
+  <li>menambahkan if endif di index.php</li>
 </ol>

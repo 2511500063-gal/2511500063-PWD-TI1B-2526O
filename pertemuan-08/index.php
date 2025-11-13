@@ -15,6 +15,51 @@ $sespesan = "";
 if (isset($_SESSION["sespesan"])):
   $sespesan = $_SESSION["sespesan"];
 endif;
+
+$sesnim = "";
+if (isset($_SESSION["nim"])):
+  $sesnim = $_SESSION["nim"];
+endif;
+
+$sesnama = "";
+if (isset($_SESSION["nama"])):
+  $sesnama = $_SESSION["nama"];
+endif;
+
+$sestgl_lahir = "";
+if (isset($_SESSION["tgl_lahir"])):
+  $sestgl_lahir = $_SESSION["tgl_lahir"];
+endif;
+
+$seshobi = "";
+if (isset($_SESSION["hobi"])):
+  $seshobi = $_SESSION["hobi"];
+endif;
+
+$sespasangan = "";
+if (isset($_SESSION["pasangan"])):
+  $sespasangan = $_SESSION["pasangan"];
+endif;
+
+$sespekerjaan = "";
+if (isset($_SESSION["pekerjaan"])):
+  $sespekerjaan = $_SESSION["pekerjaan"];
+endif;
+
+$sesortu = "";
+if (isset($_SESSION["ortu"])):
+  $sesortu = $_SESSION["ortu"];
+endif;
+
+$seskakak = "";
+if (isset($_SESSION["kakak"])):
+  $seskakak = $_SESSION["kakak"];
+endif;
+
+$sesadik = "";
+if (isset($_SESSION["adik"])):
+  $sesadik = $_SESSION["adik"];
+endif;
 ?>
 
 <!DOCTYPE html>
