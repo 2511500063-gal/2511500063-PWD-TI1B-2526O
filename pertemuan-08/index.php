@@ -98,60 +98,67 @@ endif;
     </section>
 
     <section id="Data">
+  <h2>Entry Data Mahasiswa</h2>
+  <form action="proses.php" method="POST">
+    <label><span>NIM:</span>
+      <input type="text" name="nim" placeholder="Masukkan NIM" required>
+    </label>
 
-      <h2>Entry Data Mahasiswa</h2>
-      <form action="proses.php" method="POST">
+    <label><span>Nama Lengkap:</span>
+      <input type="text" name="nama" placeholder="Masukkan Nama Lengkap" required>
+    </label>
 
-        <label for="txtNim"><span>Nim:</span>
-          <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan nim" required autocomplete="nim">
-        </label>
+    <label><span>Tempat Lahir:</span>
+      <input type="text" name="tempat" placeholder="Masukkan Tempat Lahir" required>
+    </label>
 
-        <label for="txtNama"><span>Nama Lengkap:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan Nama" required autocomplete="nama">
-        </label>
+    <label><span>Tanggal Lahir:</span>
+      <input type="text" name="tgl_lahir" placeholder="Masukkan Tanggal Lahir" required>
+    </label>
 
-        <label for="txtTempat"><span>Tempat Lahir:</span>
-          <input type="text" id="txtTempat" name="txtTempat" placeholder="Masukkan Tempat" required autocomplete="tempat">
-        </label>
+    <label><span>Hobi:</span>
+      <input type="text" name="hobi" placeholder="Masukkan Hobi" required>
+    </label>
 
-        <label for="txtTanggal"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan Tanggal" required autocomplete="tanggal">
-        </label>
+    <label><span>Pasangan:</span>
+      <input type="text" name="pasangan" placeholder="Masukkan Nama Pasangan" required>
+    </label>
 
-        <label for="txtHobi"><span>Hobi:</span>
-          <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan Tanggal" required autocomplete="tanggal">
-        </label>
+    <label><span>Pekerjaan:</span>
+      <input type="text" name="pekerjaan" placeholder="Masukkan Pekerjaan" required>
+    </label>
 
-        <label for="txtPasangan"><span>Pasangan:</span>
-          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Tanggal" required autocomplete="tanggal">
-        </label>
+    <label><span>Nama Orang Tua:</span>
+      <input type="text" name="ortu" placeholder="Masukkan Nama Orang Tua" required>
+    </label>
 
-        <label for="txtPekerjaan"><span>Pekerjaan:</span>
-          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan" required autocomplete="pekerjaan">
-        </label>
+    <label><span>Nama Kakak:</span>
+      <input type="text" name="kakak" placeholder="Masukkan Nama Kakak" required>
+    </label>
 
-         <label for="txtNamaOrangTua"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNamaOrangTua" name="txtNamaOrangTua" placeholder="Masukkan Nama Orang Tua" required autocomplete="Nama Orang Tua">
-        </label>
+    <label><span>Nama Adik:</span>
+      <input type="text" name="adik" placeholder="Masukkan Nama Adik" required>
+    </label>
 
-        <label for="txtNamaKakak"><span>Nama Kakak:</span>
-          <input type="text" id="txtNamaKakak" name="txtNamaKakak" placeholder="Masukkan Nama Kakak" required autocomplete="Nama Kakak">
-        </label>
-
-        <label for="txtNamaAdik"><span>Nama Adik:</span>
-          <input type="text" id="txtNamaAdik" name="txtNamaAdik" placeholder="Masukkan Nama Adik" required autocomplete="Nama Adik">
-        </label>
-
-        <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
-          <small id="charCount">0/200 karakter</small>
-        </label>
-
-
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
-      </form>
+    <button type="submit" name="submit_data">Kirim</button>
+    <button type="reset">Batal</button>
+  </form>
 </section>
+
+<section id="about">
+  <h2>Data Mahasiswa</h2>
+  <p><strong>NIM:</strong> <?= htmlspecialchars($sesnim) ?></p>
+  <p><strong>Nama Lengkap:</strong> <?= htmlspecialchars($sesnama) ?></p>
+  <p><strong>Tempat Lahir:</strong> <?= htmlspecialchars($_SESSION["tempat"] ?? "") ?></p>
+  <p><strong>Tanggal Lahir:</strong> <?= htmlspecialchars($sestgl_lahir) ?></p>
+  <p><strong>Hobi:</strong> <?= htmlspecialchars($seshobi) ?></p>
+  <p><strong>Pasangan:</strong> <?= htmlspecialchars($sespasangan) ?></p>
+  <p><strong>Pekerjaan:</strong> <?= htmlspecialchars($sespekerjaan) ?></p>
+  <p><strong>Nama Orang Tua:</strong> <?= htmlspecialchars($sesortu) ?></p>
+  <p><strong>Nama Kakak:</strong> <?= htmlspecialchars($seskakak) ?></p>
+  <p><strong>Nama Adik:</strong> <?= htmlspecialchars($sesadik) ?></p>
+</section>
+
 
     <section id="about">
       <?php
