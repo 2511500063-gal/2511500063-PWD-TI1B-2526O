@@ -1,5 +1,12 @@
-﻿# pertemuan-08
+# pertemuan-08
 
-Ini adalah folder untuk pertemuan ke-8.
-
-Tulis deskripsi atau catatan pertemuan di sini.
+silahkan sesuaikan dengan milik kalian masing-masing:<br><br>
+Hari ini, Rabu 12.NOV.2025, saya:<br>
+NIM: 0344300002<br>
+Nama: Yohanes Setiawan Japriadi<br>
+Kelompok: TI1A<br>
+<br>
+Proses saya mengerjakan UTS ini sebagai berikut:<br>
+<ol>
+  <li>silahkan diisi sesuai proses pengerjaan kalian masing-masing</li>
+</ol>
