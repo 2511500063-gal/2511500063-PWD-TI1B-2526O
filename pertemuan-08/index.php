@@ -52,7 +52,7 @@ endif;
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
-    <section id="about">
+    <section id="Data">
 
       <h2>Entry Data Mahasiswa</h2>
       <form action="proses.php" method="POST">
@@ -61,8 +61,36 @@ endif;
           <input type="text" id="txtNim" name="txtNim" placeholder="Masukkan nim" required autocomplete="nim">
         </label>
 
-        <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+        <label for="txtNama"><span>Nama Lengkap:</span>
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan Nama" required autocomplete="nama">
+        </label>
+
+        <label for="txtTempat"><span>Tempat Lahir:</span>
+          <input type="text" id="txtTempat" name="txtTempat" placeholder="Masukkan Tempat" required autocomplete="tempat">
+        </label>
+
+        <label for="txtTanggal"><span>Tanggal Lahir:</span>
+          <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan Tanggal" required autocomplete="tanggal">
+        </label>
+
+        <label for="txtHobi"><span>Hobi:</span>
+          <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan Tanggal" required autocomplete="tanggal">
+        </label>
+
+        <label for="txtPasangan"><span>Pasangan:</span>
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan Tanggal" required autocomplete="tanggal">
+        </label>
+
+        <label for="txtPekerjaan"><span>Pekerjaan:</span>
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan Pekerjaan" required autocomplete="pekerjaan">
+        </label>
+
+         <label for="txtNamaOrangTua"><span>Nama Orang Tua:</span>
+          <input type="text" id="txtNamaOrangTua" name="txtNamaOrangTua" placeholder="Masukkan Nama Orang Tua" required autocomplete="Nama Orang Tua">
+        </label>
+
+        <label for="txtNamaKakak"><span>Nama Kakak:</span>
+          <input type="text" id="txtNamaKakak" name="txtNamaKakak" placeholder="Masukkan Nama Kakak" required autocomplete="Nama Kakak">
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>

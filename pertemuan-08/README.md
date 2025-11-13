@@ -2,11 +2,12 @@
 
 silahkan sesuaikan dengan milik kalian masing-masing:<br><br>
 Hari ini, Rabu 12.NOV.2025, saya:<br>
-NIM: 0344300002<br>
-Nama: Yohanes Setiawan Japriadi<br>
-Kelompok: TI1A<br>
+NIM: 2511500063<br>
+Nama: GALANG NURHAFIZD<br>
+Kelompok: TI1B<br>
 <br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
-  <li>silahkan diisi sesuai proses pengerjaan kalian masing-masing</li>
+  <li>Menambahkan section#data baru di index.php</li>
+  <li></li>
 </ol>
