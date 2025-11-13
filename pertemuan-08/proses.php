@@ -14,7 +14,8 @@ if (isset($_POST["submit_data"])) {
   $_SESSION["adik"] = $_POST["adik"];
 }
 
-if (isset($_POST["txtNama"]) && isset($_POST["txtEmail"]) && isset($_POST["txtPesan"])) {
+
+if (isset($_POST["submit_contact"])) {
   $_SESSION["sesnama"] = $_POST["txtNama"];
   $_SESSION["sesemail"] = $_POST["txtEmail"];
   $_SESSION["sespesan"] = $_POST["txtPesan"];
@@ -23,3 +24,4 @@ if (isset($_POST["txtNama"]) && isset($_POST["txtEmail"]) && isset($_POST["txtPe
 header("Location: index.php");
 exit();
 ?>
+

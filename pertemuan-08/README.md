@@ -18,4 +18,5 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>menambahkan section#about lagi di index.php</li>
   <li>menambahkan isset di proses.php</li>
   <li>memperbaiki index.php</li>
+  <li>memperbaiki proses.php</li>
 </ol>
