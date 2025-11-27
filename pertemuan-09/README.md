@@ -14,5 +14,10 @@
   <li>copy file dari elearning dikirim (dosen) ke pertemuan-09</li>
   <li>mengubah data POST ke array associative</li>
   <li>menambahkan array $fieldConfig di index.php</li>
-  <li>menambahkan array menggunakan looping foreach</li>
+  <li>menambahkan array menggunakan looping foreach di index.php</li>
+  <li>menambahkan perulangan foreach di index.php</li>
+  <li>menambahkan fungsi.php</li>
+  <li>menambahkan function di fungsi.php</li>
+  <li>menambahkan tampilkanBiodata di index.php</li>
+  <li>menambahkan require_once di index.php </li>
 </ol>
