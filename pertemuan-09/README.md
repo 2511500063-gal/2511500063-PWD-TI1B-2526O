@@ -11,4 +11,6 @@
   <li>tangkap session dari file proses selesai</li>
   <li>echo session ke nilai label section contact</li>
   <li>echo session ke nilai label section contact selesai</li>
+  <li>copy file dari elearning dikirim (dosen) ke pertemuan-09</li>
+  <li>mengubah data POST ke array associative</li>
 </ol>
