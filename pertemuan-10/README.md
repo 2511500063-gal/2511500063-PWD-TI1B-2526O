@@ -9,3 +9,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>copy file dari elearning dikirim (dosen) ke pertemuan-10</li>
 <li>menambahkan koneksi.php ke dalam pertemuan-10</li>
 <li>menambahkan mysqli di koneksi.php</li>
+<li>melakukan pemasangan phpmyadmin di laragon</li>
