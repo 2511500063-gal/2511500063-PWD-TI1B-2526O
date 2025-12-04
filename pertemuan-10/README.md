@@ -14,4 +14,5 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>menambahkan read.php di dalam pertemuan-10</li>
 <li>melakukan export localhost.sql</li>
 <li>menambahkan nl2br didalam read.php</li>
-<li>menambahkan record untuk tbl_tamu</li>"
+<li>menambahkan record untuk tbl_tamu</li>
+<li>menambahkan read_inc.php di dalam pertemuan-10</li>
