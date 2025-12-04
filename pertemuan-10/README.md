@@ -18,3 +18,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>menambahkan read_inc.php di dalam pertemuan-10</li>
 <li>memodif read_inc.php</li>
 <li>menambahkan php include di index.php</li>
+<li>menghapus baris 133-141 di index.php</li>
