@@ -13,3 +13,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>menambahkan tbl_tamu di dalam database db_pwd2025</li>
 <li>menambahkan read.php di dalam pertemuan-10</li>
 <li>melakukan export localhost.sql</li>
+<li>menambahkan nl2br didalam read.php</li>
