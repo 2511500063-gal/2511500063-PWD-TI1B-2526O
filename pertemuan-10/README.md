@@ -3,3 +3,9 @@
 Ini adalah folder untuk pertemuan ke-10.
 
 Tulis deskripsi atau catatan pertemuan di sini.
+
+<ol>
+
+<li>copy file dari elearning dikirim (dosen) ke pertemuan-10</li>
+<li>menambahkan koneksi.php ke dalam pertemuan-10</li>
+<li>menambahkan mysqli di koneksi.php</li>
