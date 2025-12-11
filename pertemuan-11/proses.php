@@ -62,6 +62,8 @@ if (!$stmt) {
     redirect_ke('index.php#contact');
 } 
 
+mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
+
 $arrContact = [
   "nama" => $_POST["txtNama"] ?? "",
   "email" => $_POST["txtEmail"] ?? "",
