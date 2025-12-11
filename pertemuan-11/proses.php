@@ -39,6 +39,21 @@ if (mb_strlen($pesan) < 10) {
   $errors[] = 'Pesan minimal 10 karakter.';
 }
 
+
+
+
+
+if (!empty($errors)){
+  $_SESSION['old'] = [
+    'nama'  => $nama,
+    'email' => $email,
+    'pesan' => $pesan,
+  ];
+
+  $_SESSION['flash_error'] = implode('<br>', $errors);
+  redirect_ke('index.php#contact');
+}
+
 $arrContact = [
   "nama" => $_POST["txtNama"] ?? "",
   "email" => $_POST["txtEmail"] ?? "",
