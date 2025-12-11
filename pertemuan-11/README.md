@@ -21,3 +21,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>menghapus baris 133-141 di index.php</li>
 <li>copy bahan pertemuan-10 ke pertemuan-11</li>
 <li>update fungsi.php untuk helper redirect sederhana (pola PRG)</li>
+<li>tambah penangkap pesan sukses/gagal (flash message dari SESSION)</li>
