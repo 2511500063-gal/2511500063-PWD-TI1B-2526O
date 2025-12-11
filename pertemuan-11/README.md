@@ -26,3 +26,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>tampilkan nilai lama dari form untuk antisipasi jika error</li>
 <li>cek method form , hanya izinkan POST</li>
 <li>ambil dan bersihkan nilai dari form</li>
+<li>menambahkan array untuk menampung semua error yang ada di proses.php</li>
