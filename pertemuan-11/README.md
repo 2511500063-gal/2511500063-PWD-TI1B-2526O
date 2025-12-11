@@ -19,3 +19,5 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>memodif read_inc.php</li>
 <li>menambahkan php include di index.php</li>
 <li>menghapus baris 133-141 di index.php</li>
+<li>copy bahan pertemuan-10 ke pertemuan-11</li>
+<li>update fungsi.php untuk helper redirect sederhana (pola PRG)</li>
