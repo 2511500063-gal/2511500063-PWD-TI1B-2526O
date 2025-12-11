@@ -23,3 +23,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>update fungsi.php untuk helper redirect sederhana (pola PRG)</li>
 <li>tambah penangkap pesan sukses/gagal (flash message dari SESSION)</li>
 <li>tampilkan flash message</li>
+<li>tampilkan nilai lama dari form untuk antisipasi jika error</li>
