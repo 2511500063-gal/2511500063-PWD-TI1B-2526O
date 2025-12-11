@@ -68,7 +68,16 @@ if (mysqli_stmt_execute($stmt)) {
   unset($_SESSION['old']);
   $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah tersimpan.';
   redirect_ke('index.php#contact');
-}
+  } else {
+      $_SESSION['old'] = [
+        'nama'  => $nama,
+        'email' => $email,
+        'pesan' => $pesan,
+    ];
+    $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
+    redirect_ke('index.php#contact');
+  }
+
 
 $arrContact = [
   "nama" => $_POST["txtNama"] ?? "",

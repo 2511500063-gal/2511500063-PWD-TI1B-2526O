@@ -32,3 +32,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>bind parameter dan eksekusi (s = string)</li>
 <li>jika berhasil, kosongkan old value, beri pesan sukses</li>
 <li>PRG pola: kembali ke form / halaman home</li>
+<li>jika gagal, simpan kembali old value dan tampilkan error umum</li>
