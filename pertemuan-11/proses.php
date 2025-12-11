@@ -1,6 +1,7 @@
 <?php
+<?php
 session_start();
-require __DIR__ . './koneksi.php';
+require __DIR__ . '/koneksi.php'; 
 require_once __DIR__ . '/fungsi.php';
 
 
