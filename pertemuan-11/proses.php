@@ -24,7 +24,7 @@ if ($nama === '') {
 if ($email === '') {
   $errors[] = 'Email wajib diisi.';
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  $errors[] = 'Format e-mail tidak valid.'.
+  $errors[] = 'Format e-mail tidak valid.'
 }
 
 if ($pesan === '') {
