@@ -64,6 +64,9 @@ if (!$stmt) {
 
 mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
 
+if (mysqli_stmt_execute($stmt)) {
+}
+
 $arrContact = [
   "nama" => $_POST["txtNama"] ?? "",
   "email" => $_POST["txtEmail"] ?? "",
