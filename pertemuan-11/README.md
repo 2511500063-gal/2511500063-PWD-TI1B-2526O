@@ -31,3 +31,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>jika gagal prepare, kirim pesan error ke pengguna (tanpa detail sensitif)</li>
 <li>bind parameter dan eksekusi (s = string)</li>
 <li>jika berhasil, kosongkan old value, beri pesan sukses</li>
+<li>PRG pola: kembali ke form / halaman home</li>
