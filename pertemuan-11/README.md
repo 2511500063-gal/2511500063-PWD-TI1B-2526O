@@ -28,3 +28,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>ambil dan bersihkan nilai dari form</li>
 <li>menambahkan array untuk menampung semua error yang ada di proses.php</li>
 <li>simpan nilai lama dan pesan error, lalu redirect (konsep PRG)</li>
+<li>jika gagal prepare, kirim pesan error ke pengguna (tanpa detail sensitif)</li>
