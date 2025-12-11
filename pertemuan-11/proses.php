@@ -78,6 +78,7 @@ if (mysqli_stmt_execute($stmt)) {
     redirect_ke('index.php#contact');
   }
 
+mysqli_stmt_close($stmt);
 
 $arrContact = [
   "nama" => $_POST["txtNama"] ?? "",

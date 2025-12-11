@@ -33,3 +33,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>jika berhasil, kosongkan old value, beri pesan sukses</li>
 <li>PRG pola: kembali ke form / halaman home</li>
 <li>jika gagal, simpan kembali old value dan tampilkan error umum</li>
+<li>tutup statement</li>
