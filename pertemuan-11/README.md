@@ -24,3 +24,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>tambah penangkap pesan sukses/gagal (flash message dari SESSION)</li>
 <li>tampilkan flash message</li>
 <li>tampilkan nilai lama dari form untuk antisipasi jika error</li>
+<li>cek method form , hanya izinkan POST</li>
