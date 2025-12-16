@@ -35,3 +35,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>jika gagal, simpan kembali old value dan tampilkan error umum</li>
 <li>tutup statement</li>
 <li>menambah validasi pada read.php</li>
+<li>menambahkan created at di read.php</li>
