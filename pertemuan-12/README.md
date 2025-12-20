@@ -7,3 +7,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <ol>
 
 <li>copy folder pertemuan-11 ke pertemuan-12</li>
+<li>menambahkan link edit di read.php</li>
