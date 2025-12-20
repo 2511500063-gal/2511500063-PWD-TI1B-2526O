@@ -9,3 +9,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>copy folder pertemuan-11 ke pertemuan-12</li>
 <li>menambahkan link edit di read.php</li>
 <li>menambahkan session start , koneksi.php , fungsi.php , di read.php</li>
+<li>menambahkan ambil flash message di read.php</li>
