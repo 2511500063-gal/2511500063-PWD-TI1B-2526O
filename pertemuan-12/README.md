@@ -10,3 +10,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>menambahkan link edit di read.php</li>
 <li>menambahkan session start , koneksi.php , fungsi.php , di read.php</li>
 <li>menambahkan ambil flash message di read.php</li>
+<li>menambahkan menampilkan form dengan data lama yang dibaca cid (prefill form) di edit.php</li>
