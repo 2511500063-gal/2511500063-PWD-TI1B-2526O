@@ -12,3 +12,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>menambahkan ambil flash message di read.php</li>
 <li>menambahkan menampilkan form dengan data lama yang dibaca cid (prefill form) di edit.php</li>
 <li>menambahkan proses_update.php</li>
+<li>menyimpan perubahan menggunakan query UPDATE dan prepared statement.</li>
