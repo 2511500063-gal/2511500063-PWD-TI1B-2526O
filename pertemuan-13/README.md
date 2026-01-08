@@ -11,3 +11,4 @@ Tulis deskripsi atau catatan pertemuan di sini.
 <li>menambah link delete di file read.php untuk ke proses_delete.php</li>
 <li>menyesuaikan kode di proses_delete.php untuk proses hapus</li>
 <li>menambahkan parameter cid untuk link delete di read.php</li>
+<li>memperbaiki file proses_delete.php agar menggunakan parameter cid</li>
