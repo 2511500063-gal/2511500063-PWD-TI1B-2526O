@@ -1,112 +1,124 @@
 <?php
-  session_start();
-  require __DIR__ . '/koneksi.php';
-  require_once __DIR__ . '/fungsi.php';
+session_start();
+require __DIR__ . '/koneksi.php';
+require_once __DIR__ . '/fungsi.php';
 
-  #cek method form, hanya izinkan POST
-  if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+/* =====================
+   CEK METHOD
+===================== */
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $_SESSION['flash_error'] = 'Akses tidak valid.';
     redirect_ke('read.php');
-  }
+}
 
-  #validasi cid wajib angka dan > 0
-  $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
+/* =====================
+   VALIDASI CID
+===================== */
+$cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
-  ]);
+]);
 
-  if (!$cid) {
+if (!$cid) {
     $_SESSION['flash_error'] = 'CID Tidak Valid.';
-    redirect_ke('edit.php?cid='. (int)$cid);
-  }
+    redirect_ke('edit.php?cid=' . (int)$cid);
+}
 
-  #ambil dan bersihkan (sanitasi) nilai dari form
-  $nama  = bersihkan($_POST['txtNamaEd']  ?? '');
-  $email = bersihkan($_POST['txtEmailEd'] ?? '');
-  $pesan = bersihkan($_POST['txtPesanEd'] ?? '');
-  $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
+/* =====================
+   AMBIL & SANITASI DATA
+===================== */
+$nama  = bersihkan($_POST['txtNamaEd'] ?? '');
+$email = bersihkan($_POST['txtEmailEd'] ?? '');
+$pesan = bersihkan($_POST['txtPesanEd'] ?? '');
+$captcha = bersihkan($_POST['txtCaptcha'] ?? '');
 
-  #Validasi sederhana
-  $errors = []; #ini array untuk menampung semua error yang ada
+$nim            = bersihkan($_POST['txtnim'] ?? '');
+$nama_lengkap   = bersihkan($_POST['txtnama_lengkap'] ?? '');
+$tempat_lahir   = bersihkan($_POST['txttempat_lahir'] ?? '');
+$tanggal_lahir  = bersihkan($_POST['txttanggal_lahir'] ?? '');
+$hobi           = bersihkan($_POST['txthobi'] ?? '');
+$pasangan       = bersihkan($_POST['txtpasangan'] ?? '');
+$pekerjaan      = bersihkan($_POST['txtpekerjaan'] ?? '');
+$nama_orang_tua = bersihkan($_POST['txtnama_orang_tua'] ?? '');
+$nama_kakak     = bersihkan($_POST['txtnama_kakak'] ?? '');
+$nama_adik      = bersihkan($_POST['txtnama_adik'] ?? '');
 
-  if ($nama === '') {
-    $errors[] = 'Nama wajib diisi.';
-  }
+/* =====================
+   VALIDASI DATA
+===================== */
+$errors = [];
 
-  if ($email === '') {
-    $errors[] = 'Email wajib diisi.';
-  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Format e-mail tidak valid.';
-  }
+/* validasi tbl_tamu */
+if ($nama === '' || mb_strlen($nama) < 3) $errors[] = 'Nama minimal 3 karakter.';
+if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Format e-mail tidak valid.';
+if ($pesan === '' || mb_strlen($pesan) < 10) $errors[] = 'Pesan minimal 10 karakter.';
+if ($captcha !== '6') $errors[] = 'Jawaban captcha salah.';
 
-  if ($pesan === '') {
-    $errors[] = 'Pesan wajib diisi.';
-  }
+/* validasi biodata_mahasiswa */
+if ($nim === '' || mb_strlen($nim) < 3) $errors[] = 'NIM minimal 3 karakter.';
+if ($nama_lengkap === '' || mb_strlen($nama_lengkap) < 3) $errors[] = 'Nama lengkap minimal 3 karakter.';
+if ($tempat_lahir === '' || mb_strlen($tempat_lahir) < 3) $errors[] = 'Tempat lahir minimal 3 karakter.';
+if ($tanggal_lahir === '') $errors[] = 'Tanggal lahir wajib diisi.';
+if ($hobi === '' || mb_strlen($hobi) < 3) $errors[] = 'Hobi minimal 3 karakter.';
+if ($pasangan === '' || mb_strlen($pasangan) < 3) $errors[] = 'Pasangan minimal 3 karakter.';
+if ($pekerjaan === '' || mb_strlen($pekerjaan) < 3) $errors[] = 'Pekerjaan minimal 3 karakter.';
+if ($nama_orang_tua === '' || mb_strlen($nama_orang_tua) < 3) $errors[] = 'Nama orang tua minimal 3 karakter.';
+if ($nama_kakak === '' || mb_strlen($nama_kakak) < 3) $errors[] = 'Nama kakak minimal 3 karakter.';
+if ($nama_adik === '' || mb_strlen($nama_adik) < 3) $errors[] = 'Nama adik minimal 3 karakter.';
 
-  if ($captcha === '') {
-    $errors[] = 'Pertanyaan wajib diisi.';
-  }
-
-  if (mb_strlen($nama) < 3) {
-    $errors[] = 'Nama minimal 3 karakter.';
-  }
-
-  if (mb_strlen($pesan) < 10) {
-    $errors[] = 'Pesan minimal 10 karakter.';
-  }
-
-  if ($captcha!=="6") {
-    $errors[] = 'Jawaban '. $captcha.' captcha salah.';
-  }
-
-  /*
-  kondisi di bawah ini hanya dikerjakan jika ada error, 
-  simpan nilai lama dan pesan error, lalu redirect (konsep PRG)
-  */
-  if (!empty($errors)) {
-    $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan
-    ];
-
+/* =====================
+   PRG JIKA ERROR
+===================== */
+if (!empty($errors)) {
+    $_SESSION['old'] = $_POST;
     $_SESSION['flash_error'] = implode('<br>', $errors);
-    redirect_ke('edit.php?cid='. (int)$cid);
-  }
+    redirect_ke('edit.php?cid=' . (int)$cid);
+}
 
-  /*
-    Prepared statement untuk anti SQL injection.
-    menyiapkan query UPDATE dengan prepared statement 
-    (WAJIB WHERE cid = ?)
-  */
-  $stmt = mysqli_prepare($conn, "UPDATE tbl_tamu 
-                                SET cnama = ?, cemail = ?, cpesan = ? 
-                                WHERE cid = ?");
-  if (!$stmt) {
-    #jika gagal prepare, kirim pesan error (tanpa detail sensitif)
-    $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?cid='. (int)$cid);
-  }
+/* =====================
+   UPDATE tbl_tamu
+===================== */
+$stmtTamu = mysqli_prepare($conn, "UPDATE tbl_tamu 
+                                   SET cnama = ?, cemail = ?, cpesan = ? 
+                                   WHERE cid = ?");
+if (!$stmtTamu) {
+    $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (tbl_tamu prepare gagal).';
+    redirect_ke('edit.php?cid=' . (int)$cid);
+}
+mysqli_stmt_bind_param($stmtTamu, "sssi", $nama, $email, $pesan, $cid);
+mysqli_stmt_execute($stmtTamu);
+mysqli_stmt_close($stmtTamu);
 
-  #bind parameter dan eksekusi (s = string, i = integer)
-  mysqli_stmt_bind_param($stmt, "sssi", $nama, $email, $pesan, $cid);
+/* =====================
+   UPDATE biodata_mahasiswa
+===================== */
+$stmtBio = mysqli_prepare($conn, "UPDATE biodata_mahasiswa 
+                                  SET nim = ?, nama_lengkap = ?, tempat_lahir = ?, tanggal_lahir = ?, hobi = ?, pasangan = ?, pekerjaan = ?, nama_orang_tua = ?, nama_kakak = ?, nama_adik = ?
+                                  WHERE cid = ?");
+if (!$stmtBio) {
+    $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (biodata_mahasiswa prepare gagal).';
+    redirect_ke('edit.php?cid=' . (int)$cid);
+}
+mysqli_stmt_bind_param(
+    $stmtBio,
+    "ssssssssssi",
+    $nim,
+    $nama_lengkap,
+    $tempat_lahir,
+    $tanggal_lahir,
+    $hobi,
+    $pasangan,
+    $pekerjaan,
+    $nama_orang_tua,
+    $nama_kakak,
+    $nama_adik,
+    $cid
+);
+mysqli_stmt_execute($stmtBio);
+mysqli_stmt_close($stmtBio);
 
-  if (mysqli_stmt_execute($stmt)) { #jika berhasil, kosongkan old value
-    unset($_SESSION['old']);
-    /*
-      Redirect balik ke read.php dan tampilkan info sukses.
-    */
-    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
-    redirect_ke('read.php'); #pola PRG: kembali ke data dan exit()
-  } else { #jika gagal, simpan kembali old value dan tampilkan error umum
-    $_SESSION['old'] = [
-      'nama'  => $nama,
-      'email' => $email,
-      'pesan' => $pesan,
-    ];
-    $_SESSION['flash_error'] = 'Data gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit.php?cid='. (int)$cid);
-  }
-  #tutup statement
-  mysqli_stmt_close($stmt);
-
-  redirect_ke('edit.php?cid='. (int)$cid);
+/* =====================
+   PRG SUKSES
+===================== */
+unset($_SESSION['old']);
+$_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
+redirect_ke('read.php');
