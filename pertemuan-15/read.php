@@ -1,18 +1,35 @@
 <?php
-// read.php di-include dari index.php, session sudah aktif
+// read.php
+
+// Pastikan session aktif (baik dipanggil langsung atau lewat include)
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require 'koneksi.php';
 require_once 'fungsi.php';
 
+// Ambil data tamu
 $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
 $q   = mysqli_query($conn, $sql);
 if (!$q) {
   die("Query error: " . mysqli_error($conn));
 }
 
+// Ambil flash message jika ada
 $flash_sukses = $_SESSION['flash_sukses'] ?? '';
 $flash_error  = $_SESSION['flash_error']  ?? '';
 unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
 ?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Buku Tamu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
 <?php if (!empty($flash_sukses)): ?>
   <div style="padding:10px; margin-bottom:10px;
@@ -55,3 +72,6 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
     </tr>
   <?php endwhile; ?>
 </table>
+
+</body>
+</html>
