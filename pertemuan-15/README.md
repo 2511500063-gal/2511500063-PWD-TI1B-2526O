@@ -16,3 +16,4 @@
 <li>menambahkan file edit_biodata.php</li>
 <li>menambahkan file biodata_update.php</li>
 <li>menambahkan file biodata_delete.php</li>
+<li>menambahkan flash dan old di index.php</li>
