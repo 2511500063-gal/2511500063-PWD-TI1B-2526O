@@ -9,11 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect_ke('index.php');
 }
 
-/* ================== CEK JENIS FORM ================== */
 $form_type = $_POST['form_type'] ?? '';
 
 /* ============================================================
-   BAGIAN 1 : FORM BIODATA MAHASISWA
+   FORM BIODATA
    ============================================================ */
 if ($form_type === 'biodata') {
 
@@ -30,7 +29,6 @@ if ($form_type === 'biodata') {
 
     $errors_bio = [];
 
-    // Wajib isi
     if ($nim === '')             $errors_bio[] = 'NIM wajib diisi.';
     if ($nama_lengkap === '')    $errors_bio[] = 'Nama lengkap wajib diisi.';
     if ($tempat_lahir === '')    $errors_bio[] = 'Tempat lahir wajib diisi.';
@@ -42,7 +40,6 @@ if ($form_type === 'biodata') {
     if ($nama_kakak === '')      $errors_bio[] = 'Nama Kakak wajib diisi.';
     if ($nama_adik === '')       $errors_bio[] = 'Nama Adik wajib diisi.';
 
-    // Panjang
     if ($nim !== '' && (mb_strlen($nim, 'UTF-8') < 5 || mb_strlen($nim, 'UTF-8') > 15)) {
         $errors_bio[] = 'NIM harus 5–15 karakter.';
     }
@@ -56,7 +53,6 @@ if ($form_type === 'biodata') {
         $errors_bio[] = 'Hobi maksimal 100 karakter.';
     }
 
-    // Hanya huruf + spasi
     if ($nama_lengkap !== ''   && !preg_match('/^[\p{L}\s]+$/u', $nama_lengkap))   $errors_bio[] = 'Nama lengkap hanya boleh berisi huruf dan spasi.';
     if ($tempat_lahir !== ''   && !preg_match('/^[\p{L}\s]+$/u', $tempat_lahir))   $errors_bio[] = 'Tempat lahir hanya boleh berisi huruf dan spasi.';
     if ($nama_orang_tua !== '' && !preg_match('/^[\p{L}\s]+$/u', $nama_orang_tua)) $errors_bio[] = 'Nama orang tua hanya boleh berisi huruf dan spasi.';
@@ -76,14 +72,12 @@ if ($form_type === 'biodata') {
             'nama_kakak'     => $nama_kakak,
             'nama_adik'      => $nama_adik,
         ];
-
         $_SESSION['flash_error_bio'] = implode('<br>', $errors_bio);
         redirect_ke('index.php#biodata');
     }
 
-    // INSERT ke tabel biodata_mahasiswa
     $sql_bio = "INSERT INTO biodata_mahasiswa 
-                (nim, nama_lengkap, tempat_lahir, tanggal_lahir, hobi, pasangan, 
+                (nim, nama_lengkap, tempat_lahir, tanggal_lahir, hobi, pasangan,
                  pekerjaan, nama_orang_tua, nama_kakak, nama_adik)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt_bio = mysqli_prepare($conn, $sql_bio);
@@ -139,19 +133,15 @@ if ($form_type === 'biodata') {
             'nama_kakak'     => $nama_kakak,
             'nama_adik'      => $nama_adik,
         ];
-
         $_SESSION['flash_error_bio'] = 'Data biodata gagal disimpan: ' . mysqli_error($conn);
         redirect_ke('index.php#biodata');
     }
-    mysqli_stmt_close($stmt_bio);
-
-    exit;
 }
 
 /* ============================================================
-   BAGIAN 2 : FORM KONTAK
+   FORM CONTACT
    ============================================================ */
-if ($form_type === 'contact') {
+elseif ($form_type === 'contact') {
 
     $nama    = bersihkan($_POST['txtNama']    ?? '');
     $email   = bersihkan($_POST['txtEmail']   ?? '');
@@ -160,29 +150,19 @@ if ($form_type === 'contact') {
 
     $errors = [];
 
-    if ($nama === '') {
-        $errors[] = 'Nama wajib diisi.';
-    }
-
+    if ($nama === '')  $errors[] = 'Nama wajib diisi.';
     if ($email === '') {
         $errors[] = 'Email wajib diisi.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Format e-mail tidak valid.';
     }
+    if ($pesan === '')  $errors[] = 'Pesan wajib diisi.';
+    if ($captcha === '')$errors[] = 'Pertanyaan wajib diisi.';
 
-    if ($pesan === '') {
-        $errors[] = 'Pesan wajib diisi.';
-    }
-
-    if ($captcha === '') {
-        $errors[] = 'Pertanyaan wajib diisi.';
-    }
-
-    if (mb_strlen($nama, 'UTF-8') < 3) {
+    if ($nama !== '' && mb_strlen($nama, 'UTF-8') < 3) {
         $errors[] = 'Nama minimal 3 karakter.';
     }
-
-    if (mb_strlen($pesan, 'UTF-8') < 10) {
+    if ($pesan !== '' && mb_strlen($pesan, 'UTF-8') < 10) {
         $errors[] = 'Pesan minimal 10 karakter.';
     }
 
@@ -197,12 +177,11 @@ if ($form_type === 'contact') {
             'pesan'   => $pesan,
             'captcha' => $captcha,
         ];
-
         $_SESSION['flash_error'] = implode('<br>', $errors);
         redirect_ke('index.php#contact');
     }
 
-    $sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
+    $sql  = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
 
     if (!$stmt) {
@@ -226,11 +205,12 @@ if ($form_type === 'contact') {
         $_SESSION['flash_error'] = 'Data gagal disimpan. Silakan coba lagi.';
         redirect_ke('index.php#contact');
     }
-    mysqli_stmt_close($stmt);
-
-    exit;
 }
 
-/* Jika form_type tidak dikenal */
-$_SESSION['flash_error'] = 'Form tidak dikenal.';
-redirect_ke('index.php');
+/* ============================================================
+   FORM TYPE TIDAK DIKENAL
+   ============================================================ */
+else {
+    $_SESSION['flash_error'] = 'Form tidak dikenal.';
+    redirect_ke('index.php#contact');
+}
