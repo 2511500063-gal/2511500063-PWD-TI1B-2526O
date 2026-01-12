@@ -1,7 +1,7 @@
 <?php
-session_start();
+// read.php di-include dari index.php, session sudah aktif
 require 'koneksi.php';
-require 'fungsi.php';
+require_once 'fungsi.php';
 
 $sql = "SELECT * FROM tbl_tamu ORDER BY cid DESC";
 $q   = mysqli_query($conn, $sql);
