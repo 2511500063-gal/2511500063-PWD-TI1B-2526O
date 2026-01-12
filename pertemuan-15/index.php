@@ -205,3 +205,4 @@ require_once __DIR__ . '/fungsi.php';
   <script src="script.js"></script>
 </body>
 </html>
+;
