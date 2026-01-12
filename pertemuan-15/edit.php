@@ -29,10 +29,10 @@
     kembalikan pengguna ke halaman awal (read.php) sembari 
     mengirim penanda error.
   */
-  if (!$cid) {
-    $_SESSION['flash_error'] = 'Akses tidak valid.';
-    redirect_ke('read.php');
-  }
+  if ($cid === false || $cid === null) {
+  $_SESSION['flash_error'] = 'Akses tidak valid.';
+  redirect_ke('read.php');
+}
 
   /*
     Ambil data lama dari DB menggunakan prepared statement, 
