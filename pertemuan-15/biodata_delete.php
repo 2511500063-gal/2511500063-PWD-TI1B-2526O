@@ -30,4 +30,4 @@ if (mysqli_stmt_execute($stmt)) {
 }
 
 mysqli_stmt_close($stmt);
-redirect_ke('index.php');
+redirect_ke('index.php')
