@@ -160,6 +160,7 @@ $fieldConfig = [
       </div>
     <?php endif; ?>
 
+    <!-- Form kontak -->
     <form action="proses.php" method="POST">
       <input type="hidden" name="form_type" value="contact">
 
@@ -189,7 +190,26 @@ $fieldConfig = [
 
     <br><hr>
     <h2>Yang menghubungi kami</h2>
-    <?php include 'read.php'; ?>
+
+    <?php
+    // Tampilkan daftar pengirim seperti contoh (Nama, Email, Pesan)
+    require 'koneksi.php';
+    $sqlTamu = "SELECT cnama, cemail, cpesan FROM tbl_tamu ORDER BY cid DESC";
+    $qTamu   = mysqli_query($conn, $sqlTamu);
+    ?>
+
+    <?php if ($qTamu && mysqli_num_rows($qTamu) > 0): ?>
+      <?php while ($t = mysqli_fetch_assoc($qTamu)): ?>
+        <div style="border-bottom:1px solid #e0e0e0; padding:15px 0;">
+          <p><strong>Nama:</strong> <?= htmlspecialchars($t['cnama']); ?></p>
+          <p><strong>Email:</strong> <?= htmlspecialchars($t['cemail']); ?></p>
+          <p><strong>Pesan Anda:</strong> <?= nl2br(htmlspecialchars($t['cpesan'])); ?></p>
+        </div>
+      <?php endwhile; ?>
+    <?php else: ?>
+      <p>Belum ada yang menghubungi.</p>
+    <?php endif; ?>
+
   </section>
 </main>
 
