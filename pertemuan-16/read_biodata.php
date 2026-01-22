@@ -54,7 +54,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
       <td>
         <a href="edit_biodata.php?id=<?= (int)$row['id']; ?>">Edit</a>
         <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nama_lengkap']); ?>?')"
-           href="proses_delete_biodata.php?id=<?= (int)$row['id']; ?>">Delete</a>
+           href="delete_biodata.php?id=<?= (int)$row['id']; ?>">Delete</a>
       </td>
       <td><?= $row['id']; ?></td>
       <td><?= htmlspecialchars($row['nim']); ?></td>
