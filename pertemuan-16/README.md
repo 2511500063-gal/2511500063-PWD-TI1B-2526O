@@ -11,3 +11,7 @@
 <li>menambahkan konsep PRG</li>
 <li>menambahkan query insert</li>
 <li>menambahkan flash sukses </li>
+<li>menambahkan read_biodata.php</li>
+<li>menambahkan update_biodata.php </li>
+<li>menambahkan delete_biodata.php </li>
+<li>menambahkan edit_biodata.php </li>
