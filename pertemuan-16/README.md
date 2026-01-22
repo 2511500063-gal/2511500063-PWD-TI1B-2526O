@@ -1,5 +1,8 @@
 # pertemuan-16
 
+SAYA , GALANG NURHAFIZD 
+I LOVE CODING 
+
 <ol>
 
 <li>mengcopy bahan uas dari file yang dikirim dosen</li>
@@ -15,3 +18,13 @@
 <li>menambahkan update_biodata.php </li>
 <li>menambahkan delete_biodata.php </li>
 <li>menambahkan edit_biodata.php </li>
+<li>menambahkan select untuk ambil data dari biodata</li>
+<li>menambahkan flash message</li>
+<li>membuat form biodata</li>
+<li>membuat form biodata yang sesuai dengan proses_biodata.php</li>
+<li>menambahkan bagian session data lama bisa dihapus </li>
+<li>menambahkan ambil error dan nilai old input kalau ada </li>
+<li>menambahkan hidden input untuk biodata </li>
+<li>menambahkan bind parameter dan eksekusi string</li>
+
+<ol>
